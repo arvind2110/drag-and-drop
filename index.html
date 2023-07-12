@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop using JavaScript</title>
+    <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+    <div id="main-container" class="container-margin">
+        <header class="border container-padding">
+            <h1>Drag and Drop Feature using JavaScript</h1>
+        </header>
+        <main id="main-content-container" class="border container-padding container-margin-top container-margin-bottom">
+            <div class="container-padding">
+                <h2>[ Example 1 - One-Directional ]</h2>
+            </div>
+            <div class="example container-padding">
+                <section class="main-container-left border container-padding">
+                    <h4>Todo Tasks List</h4>
+                    <hr class="container-margin-top">
+                    <div id="draggable-1" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample1(event);">
+                        Task 1
+                    </div>
+                    <div id="draggable-2" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample1(event);">
+                        Task 2
+                    </div>
+                    <div id="draggable-3" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample1(event);">
+                        Task 3
+                    </div>
+                    <div id="draggable-4" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample1(event);">
+                        Task 4
+                    </div>
+                    <div id="draggable-5" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample1(event);">
+                        Task 5
+                    </div>
+                </section>
+                <section class="main-container-dropzone border container-padding">
+                    <div class="dropzone container-padding">
+                        <div class="dropzone-area" ondragover="onDragOverExample1(event);" ondrop="onDropExample1(event);">
+                            Drop Zone Example 1
+                        </div>
+                    </div>
+                </section>
+                <section class="main-container-right border container-padding">
+                    <h4>Done Tasks List</h4>
+                    <hr class="container-margin-top">
+                    <div id="dropzone-content-one"></div>
+                </section>
+            </div>
+            <div class="container-padding container-margin-top">
+                <h2>[ Example 2 - Bi-Directional ]</h2>
+            </div>
+            <div class="example container-padding">
+                <section class="main-container-left border container-padding">
+                    <h4>Todo Tasks List</h4>
+                    <hr class="container-margin-top">
+                    <div id="dropzone-content-two">
+                        <div id="draggable-6" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample2(event);">
+                            Task 1
+                        </div>
+                        <div id="draggable-7" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample2(event);">
+                            Task 2
+                        </div>
+                        <div id="draggable-8" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample2(event);">
+                            Task 3
+                        </div>
+                        <div id="draggable-9" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample2(event);">
+                            Task 4
+                        </div>
+                        <div id="draggable-10" class="task container-padding container-margin-top border" draggable="true" ondragstart="onDragStartExample2(event);">
+                            Task 5
+                        </div>
+                    </div>
+                </section>
+                <section class="main-container-dropzone border container-padding">
+                    <div class="dropzone container-padding">
+                        <div class="dropzone-area" ondragover="onDragOverExample2(event);" ondrop="onDropExample2(event);">
+                            Drop Zone Example 2
+                        </div>
+                    </div>
+                </section>
+                <section class="main-container-right border container-padding">
+                    <h4>Done Tasks List</h4>
+                    <hr class="container-margin-top">
+                    <div id="dropzone-content-three"></div>
+                </section>
+            </div>
+        </main>
+        <footer class="border container-padding">
+            <h3>Thank You!!!</h3>
+        </footer>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
